@@ -1,7 +1,16 @@
+.justifyContentCenter {
+    justify-content: center;
+}
+
+.justifyContentSpaceBetween {
+    justify-content: space-between;
+}
+
 .site {
     background: white;
     color: black;
     height: 100%;
+    overflow: scroll;
 }
 
 .site__container {
@@ -88,19 +97,45 @@
     font-size: 1.375rem;
 }
 
-.place__roomsAndGuest {
+
+.place__roomsAndGuest,
+.hostingDetails {
     display: flex;
 }
 
-.place__roomsAndGuestItem:before {
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.row__img {
+    justify-content: center;
+    align-items: center;
+    margin: auto 0;
+}
+
+.row__column {
+    display: flex;
+    flex-direction: column;
+}
+
+.place__roomsAndGuestItem:before,
+.hostingDetailItem:before {
     content: ' · ';
     display: inline-block;
     margin: 0 .375rem;
 }
 
-.place__roomsAndGuestItem:first-child:before {
+.place__roomsAndGuestItem:first-child:before,
+.hostingDetailItem:first-child:before {
     content: '';
     margin: 0;
+}
+
+.hosting__descriptions {
+    padding: 2rem 0;
+    border-bottom: 1px solid #DDDDDD;
 }
 
 .customer_reviewContainerSmall {
@@ -175,6 +210,8 @@
     padding-top: 4px;
 }
 
+.showMore,
+.translator a,
 .customer_reviewRatingAndReviewAction a {
     text-decoration: underline;
 }
@@ -196,9 +233,192 @@
 
 .contentSecondColumn {
     width: 33%;
+    margin-left: 8.333333333333332%;
 }
 
 .star {
     width: .5rem;
     height: .5rem;
+}
+
+.hostingContainer {
+    position: relative;
+    display: flex;
+    padding: 1.5rem 0;
+    gap: 1.5rem;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.hosting__renter {
+    display: flex;
+    flex-direction: column;
+}
+
+.hosting {
+    width: 3rem;
+    height: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hostingImg {
+    border-radius: 50%;
+    display: inline;
+    margin: 0 auto;
+    height: 100%;
+    width: auto;
+}
+
+.hostingBadge {
+    position: absolute;
+    right: -6px;
+    width: 20px;
+    height: 20px;
+    background-image: url('/hosting-badge.svg');
+    background-repeat: no-repeat;
+    bottom: -1px;
+    z-index: 1;
+}
+
+.hostedBy {
+
+}
+
+.hostedByItem {
+
+}
+
+
+.hostingDetails {
+
+}
+
+.hostingDetailItem {
+    color: #717171;
+    font-weight: 300;
+}
+
+.translator {
+    margin-top: 32px;
+    padding: 1rem;
+    background-color: #f7f7f7;
+    border-radius: .5rem;
+}
+
+.translator a {
+    font-weight: 500;
+}
+
+.disclaimerContainer {
+    padding-top: 32px;
+    padding-bottom: 48px;
+}
+
+.disclaimer {
+    line-height: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    white-space: pre-wrap;
+}
+
+.showMoreContainer {
+    position: relative;
+    display: flex;
+}
+
+.showMore {
+}
+
+.showMoreArrow {
+    /*background-image: url('/arrow-right.svg');*/
+    /*background-repeat: no-repeat;*/
+    width: .75rem;
+    height: .75rem;
+    display: block;
+}
+
+.showMore:after {
+    content: '';
+    display: block;
+}
+
+.priceContainer {
+    margin-bottom: 1.5rem;
+}
+
+.price {
+    font-size: 1.375rem;
+    font-weight: 500;
+}
+
+.price__unit {
+    padding-left: .5rem;
+}
+.reserve__button {
+    --mouse-x: 71.86898939385613;
+    --mouse-y: 14.583333333333334;
+    border-radius: .5rem;
+    padding: .875rem 1.5rem;
+    min-width: 200px;
+    width: 100%;
+    color: white;
+    background-image: radial-gradient(circle at center,#FF385C 0%,#E61E4D 27.5%,#E31C5F 40%,#D70466 57.5%,#BD1E59 75%,#BD1E59 100%);
+    background-position: calc((100 - var(--mouse-x, 0)) * 1%) calc((100 - var(--mouse-y, 0)) * 1%);
+}
+
+.pre_orderHints {
+    text-align: center;
+}
+.pre_orderContainer {
+    margin-top: 32px;
+    padding: 2rem;
+    border: 1px solid #DDDDDD;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px;
+    border-radius: .75rem;
+}
+.pre_order {
+    width: 100%;
+    justify-content: center;
+    gap: 0;
+}
+
+.pre_orderColumn {
+    gap: 0;
+    width: 100%;
+}
+
+.pre_orderInput {
+    border: 1px solid #DDDDDD;
+    min-height: 48px;
+    /*justify-content: center;*/
+}
+.pre_order .pre_orderInput:first-child {
+    border-radius: .75rem 0 .75rem 0;
+}
+
+.pre_order .pre_orderInput:last-child {
+    border-radius: 0 .75rem 0 .75rem;
+}
+
+.pre_orderPriceItem {
+    padding-top: 1rem;
+}
+
+.pre_orderPriceItem span:first-child {
+    text-decoration: underline;
+}
+
+.pre_orderInputButton {
+    min-height: 48px;
+    height: 100%;
+}
+
+.pre_orderPriceTotalItem {
+    padding-top: 1rem;
+    margin-top: 1rem;
+    border-top:1px solid #DDDDDD;
+    font-weight: 500;
 }
