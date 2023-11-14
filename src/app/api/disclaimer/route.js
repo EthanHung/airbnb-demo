@@ -1,0 +1,11 @@
+import { NextResponse } from "next/server";
+
+// To handle a GET request to /api
+export async function GET(request) {
+    let disclaimer = {
+        data: '<span class="ll4r2nl dir dir-ltr">NO CLEANING FEE<br>Ticked off your bucket list, but still need more?<br>1960\'s: All aboard for the magical mystery tour with the Beatles and their Yellow Submarine, powered by love; because that\'s what makes the world go round<br>Cold War superpower scenario: "Hunt for Red October"puts you in charge of nuclear mutually assured destruction,will soviet or US flinch first?<br>1943 North Atlantic: you are unterseeboot commander happy hunting stricken conveys with torpedo\'s, then oops..depth charges,blind panic<br><br><span class="_1di55y9">The space</span><br>.. your diesel/electric metal box emergency dives to crush depth to wriggle free from depth charges pounding against the hull,classic "Das Boot" stuff.<br><br>-1850\'s captain Nemo of the steam powered steampunk Nautilus must fend off monsters of the deep.<br><br><span class="_1di55y9">Guest access</span><br>It really is BIG inside...The Yellow Submarine floats in a sea of green suspended among redwood trees, you can\'t miss it!<br>The submarine is yours to relax and play in... enter via ramp/jetty to the front bulkhead door to a victorian steam punk lounge &amp; galley, then up periscope to control/bridge, or midships to U Boat sleeping quarters/torpedos and then beatles themed bathroom at rear<br><br><span class="_1di55y9">Other things to note</span><br>Yes..breakfast supplies are in the galley.<br>Cellphone/internet use is of course impossible onboard a submarine (you will thank us for this,kids will forget their devices)<br>....thankyou for stepping out....you may just revert to your childhood...and if you have children on board,remember they will need 100% supervision............<br>but you will be rewarded with an overnight experience you won\'t stop talking about...so let\'s get started!<br>Captain Nemo runs a tight and tidy ship...crew making a mess will be confined to the mess,won\'t see the surface or shore leave this side of eternity!<br>PLEASE TAKE ALL YOUR POSESSIONS WHEN YOU DISEMBARK THIS VESSEL</span>'
+    };
+
+    // Do whatever you want
+    return NextResponse.json(disclaimer, { status: 200 });
+}

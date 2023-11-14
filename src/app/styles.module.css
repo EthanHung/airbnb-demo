@@ -136,6 +136,19 @@
 .hosting__descriptions {
     padding: 2rem 0;
     border-bottom: 1px solid #DDDDDD;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.hosting__descriptionsRow {
+    margin: 0 0 auto 0;
+}
+
+.hosting__descriptionsRow .row__column div:last-child {
+    color: #717171;
+    font-weight: 300;
+    font-size: .875rem;
 }
 
 .customer_reviewContainerSmall {
@@ -296,6 +309,7 @@
 .hostingDetailItem {
     color: #717171;
     font-weight: 300;
+    font-size: .875rem;
 }
 
 .translator {
@@ -322,6 +336,7 @@
     -webkit-line-clamp: 6;
     -webkit-box-orient: vertical;
     white-space: pre-wrap;
+    font-size: .875rem;
 }
 
 .showMoreContainer {
@@ -367,11 +382,14 @@
     color: white;
     background-image: radial-gradient(circle at center,#FF385C 0%,#E61E4D 27.5%,#E31C5F 40%,#D70466 57.5%,#BD1E59 75%,#BD1E59 100%);
     background-position: calc((100 - var(--mouse-x, 0)) * 1%) calc((100 - var(--mouse-y, 0)) * 1%);
+    font-weight: 400;
 }
 
 .pre_orderHints {
     text-align: center;
+    font-weight: 200;
 }
+
 .pre_orderContainer {
     margin-top: 32px;
     padding: 2rem;
@@ -405,6 +423,7 @@
 
 .pre_orderPriceItem {
     padding-top: 1rem;
+    font-weight: 200;
 }
 
 .pre_orderPriceItem span:first-child {
